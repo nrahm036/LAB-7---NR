@@ -1,0 +1,82 @@
+#Importlibaries
+import RPi.GPIO as GPIO
+import time
+#importfile
+
+# Define servo pins
+BASE_PIN, SHOULDER_PIN, WRIST_PIN = #pin, pin, pin
+    #GPIO pins for three servo motors
+
+# Initialize GPIO
+    # Set up each pin (BASE_PIN, SHOULDER_PIN, WRIST_PIN) as an output pin
+
+# READ G-CODE FILE
+def read_gcode_file(file_path):
+    '''
+    Reads a G-Code file provided by the user.
+    (input)
+     file_path: Path to the G-Code file
+    (output)
+    List of file lines
+    '''
+    # Implement file reading logic and return a list of lines
+
+# Function to move servos with PWM signal
+def move_servo(pin, angle_degrees):
+    '''
+    Moves a servo connected to the specified pin to the specified angle using PWM.
+    (input)
+    pin: GPIO pin number to which the servo is connected
+    angle_degrees: Desired angle for the servo (0 to 180 degrees)
+    (output) 
+    '''
+    # Implement servo movement logic using PWM
+
+# INTERPRET
+
+# Function to Move Servos using G-Code Commands
+def move_servos_from_gcode(gcode_line):
+    '''
+    Extract servo angle from specified G-Code parameters.
+    (input)
+    gcode_line: A line of G-Code
+    (output)
+    '''
+    # Implement logic to interpret G-Code and move servos accordingly
+
+# Function to get Angles from specific G-code parameter
+def get_angle_from_parameter(gcode_line, parameter):     
+    '''
+    Function to Translate degrees to PWM Signal.
+    (input)
+    gcode_line: A line of G-Code
+    parameter: G-Code parameter identifier (e.g., 'S' or 'E')
+    (output)
+    '''
+    # Implement logic to extract angle from G-Code parameter
+
+def translate(angle_degrees):
+    '''
+    Translate degrees to PWM duty cycle using a specified range.
+    (input)
+    angle_degrees: Angle in degrees (0 to 180)
+    (output)
+    Return nothing
+    '''
+    # Implement translation logic
+
+# MAIN
+def main():
+    '''
+    Read and process the G-Code file.
+    Get user input for the file_name.
+    Return G-Code lines.
+    '''
+    # Get user input for the file_name
+    file_name = input("Enter the G-Code file path: ")
+
+    # Read and process the G-Code file
+    list_of_lines = read_gcode_file(file_name)
+
+    # Return G-Code lines
+    return list_of_lines
